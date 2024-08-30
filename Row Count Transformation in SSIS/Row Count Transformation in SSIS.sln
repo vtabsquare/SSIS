@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "Row Count Transformation in SSIS", "Row Count Transformation in SSIS\Row Count Transformation in SSIS.dtproj", "{D0E7EBAB-D55B-41FA-8CA3-BF0CB0399830}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D0E7EBAB-D55B-41FA-8CA3-BF0CB0399830}.Development|Default.ActiveCfg = Development
+		{D0E7EBAB-D55B-41FA-8CA3-BF0CB0399830}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {850B4911-301B-42F2-A124-B7D4608E1BE6}
+	EndGlobalSection
+EndGlobal

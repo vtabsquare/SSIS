@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "MySQLtoSQLServer", "MySQLtoSQLServer\MySQLtoSQLServer.dtproj", "{222A0E1D-9A16-40EE-8029-BF5C8623A22F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{222A0E1D-9A16-40EE-8029-BF5C8623A22F}.Development|Default.ActiveCfg = Development
+		{222A0E1D-9A16-40EE-8029-BF5C8623A22F}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {225525A5-2FE2-47B6-A76B-CFFCD5755A01}
+	EndGlobalSection
+EndGlobal
