@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "Excel To SQL Server using SSIS", "Excel To SQL Server using SSIS\Excel To SQL Server using SSIS.dtproj", "{196EBCDB-E64A-4288-BFC9-FF8F887709F7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{196EBCDB-E64A-4288-BFC9-FF8F887709F7}.Development|Default.ActiveCfg = Development
+		{196EBCDB-E64A-4288-BFC9-FF8F887709F7}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0E3E4EA9-A945-4F63-AA95-15A45D59953C}
+	EndGlobalSection
+EndGlobal

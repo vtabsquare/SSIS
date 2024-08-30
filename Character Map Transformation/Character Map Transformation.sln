@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "Character Map Transformation", "Character Map Transformation\Character Map Transformation.dtproj", "{AB6E24E0-3F30-4D7B-BF29-A8AF22405749}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB6E24E0-3F30-4D7B-BF29-A8AF22405749}.Development|Default.ActiveCfg = Development
+		{AB6E24E0-3F30-4D7B-BF29-A8AF22405749}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BDCB7098-7D58-4BFA-9883-5EC3AC03E7DF}
+	EndGlobalSection
+EndGlobal
