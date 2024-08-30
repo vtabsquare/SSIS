@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "ScriptTask in SSIS", "ScriptTask in SSIS.dtproj", "{C1B1C8EC-C705-4B7B-8369-69A01034084B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C1B1C8EC-C705-4B7B-8369-69A01034084B}.Development|Default.ActiveCfg = Development
+		{C1B1C8EC-C705-4B7B-8369-69A01034084B}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DFD57BA5-37DF-41E0-AB81-8344BC8660FA}
+	EndGlobalSection
+EndGlobal

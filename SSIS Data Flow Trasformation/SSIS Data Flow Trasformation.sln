@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "SSIS Data Flow Trasformation", "SSIS Data Flow Trasformation.dtproj", "{1A35CFE2-7D1B-43BA-802E-9030F2F7A3B8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1A35CFE2-7D1B-43BA-802E-9030F2F7A3B8}.Development|Default.ActiveCfg = Development
+		{1A35CFE2-7D1B-43BA-802E-9030F2F7A3B8}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9AAC21CC-0EC6-4219-8800-8872957D40B5}
+	EndGlobalSection
+EndGlobal

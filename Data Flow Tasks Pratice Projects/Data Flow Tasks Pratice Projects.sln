@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "Data Flow Tasks Pratice Projects", "Data Flow Tasks Pratice Projects.dtproj", "{C122E2F5-7B72-4257-8F81-08742FFFBB10}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C122E2F5-7B72-4257-8F81-08742FFFBB10}.Development|Default.ActiveCfg = Development
+		{C122E2F5-7B72-4257-8F81-08742FFFBB10}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {773C7753-EFDB-4A62-B6EB-4983A46EE855}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,536 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="8/2/2024 7:38:18 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-K7CFNCA"
+  DTS:CreatorName="DESKTOP-K7CFNCA\Admin"
+  DTS:DTSID="{DCA4DDE8-3529-4693-B59C-EA33A85B436B}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5556.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{F1CB59B0-F38F-40F3-8C38-DBAF1FE7E056}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-K7CFNCA\MSSQLSERVER001.SSIS.yuvi]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{3C9E2199-2FF5-4AE6-938E-50C1F9D382AA}"
+      DTS:ObjectName="DESKTOP-K7CFNCA\MSSQLSERVER001.SSIS.yuvi">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-K7CFNCA\MSSQLSERVER001;User ID=yuvi;Initial Catalog=SSIS;Provider=SQLOLEDB.1;Application Name=SSIS-Package-{3C9E2199-2FF5-4AE6-938E-50C1F9D382AA}DESKTOP-K7CFNCA\MSSQLSERVER001.SSIS.yuvi;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAJbOGLkIllEewPJbNIWXSvgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABLqjZ6IKLVHn1pcO/wQ6CCdJ7pDO1oeYsLoOm8qk7UpgAAAAAOgAAAAAIAACAAAAA5fxNJ730Ro93OAXo2+aWTcwh7jIxMnPUj3bIw1kMreRAAAACAE9t1LgrhgEiAUsjeGq3yQAAAAIVsy+YfPDJ6XsFEyVozALBCAIFfRMkIQcdg+QvdkjAlTgY/Dca9S0BISzEHdawW8nJJhHVbsjA/hWe1zMI0dJo</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{3B8CBA16-354F-4969-995D-0DFAF1FB8E33}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Admin\Downloads\Courses.CSV">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CourseId"
+              DTS:DTSID="{EA787F8B-ECD6-49CF-BAA5-B4B89E3244A9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CourseName"
+              DTS:DTSID="{EFDF333E-761D-4EFE-9DAD-F58352877F26}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CourseDurationInHours"
+              DTS:DTSID="{F01105D2-9EE8-48B1-8343-1C584C3D8C8B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CollegeName"
+              DTS:DTSID="{CE877020-2E54-4C6F-B5EB-2469C5795521}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Flat File to SQL"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{25138C6B-B84C-4A7C-95C4-284FEA40A6B5}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Flat File to SQL"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Flat File to SQL\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Flat File to SQL\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Flat File to SQL\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Flat File to SQL\Flat File Source.Outputs[Flat File Source Output].Columns[CourseId]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flat File to SQL\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CourseId]"
+                      length="50"
+                      lineageId="Package\Flat File to SQL\Flat File Source.Outputs[Flat File Source Output].Columns[CourseId]"
+                      name="CourseId"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Flat File to SQL\Flat File Source.Outputs[Flat File Source Output].Columns[CourseName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flat File to SQL\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CourseName]"
+                      length="50"
+                      lineageId="Package\Flat File to SQL\Flat File Source.Outputs[Flat File Source Output].Columns[CourseName]"
+                      name="CourseName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Flat File to SQL\Flat File Source.Outputs[Flat File Source Output].Columns[CourseDurationInHours]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flat File to SQL\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CourseDurationInHours]"
+                      length="50"
+                      lineageId="Package\Flat File to SQL\Flat File Source.Outputs[Flat File Source Output].Columns[CourseDurationInHours]"
+                      name="CourseDurationInHours"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Flat File to SQL\Flat File Source.Outputs[Flat File Source Output].Columns[CollegeName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flat File to SQL\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CollegeName]"
+                      length="50"
+                      lineageId="Package\Flat File to SQL\Flat File Source.Outputs[Flat File Source Output].Columns[CollegeName]"
+                      name="CollegeName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Flat File to SQL\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CourseId]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CourseId" />
+                    <externalMetadataColumn
+                      refId="Package\Flat File to SQL\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CourseName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CourseName" />
+                    <externalMetadataColumn
+                      refId="Package\Flat File to SQL\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CourseDurationInHours]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CourseDurationInHours" />
+                    <externalMetadataColumn
+                      refId="Package\Flat File to SQL\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CollegeName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CollegeName" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Flat File to SQL\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Flat File to SQL\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Flat File to SQL\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Flat File to SQL\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Flat File to SQL\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Flat File to SQL\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Flat File to SQL\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Flat File to SQL\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[COURSE]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Flat File to SQL\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-K7CFNCA\MSSQLSERVER001.SSIS.yuvi]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-K7CFNCA\MSSQLSERVER001.SSIS.yuvi]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Flat File to SQL\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Flat File to SQL\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CourseId]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CourseId"
+                      externalMetadataColumnId="Package\Flat File to SQL\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CourseId]"
+                      lineageId="Package\Flat File to SQL\Flat File Source.Outputs[Flat File Source Output].Columns[CourseId]" />
+                    <inputColumn
+                      refId="Package\Flat File to SQL\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CourseName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CourseName"
+                      externalMetadataColumnId="Package\Flat File to SQL\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CourseName]"
+                      lineageId="Package\Flat File to SQL\Flat File Source.Outputs[Flat File Source Output].Columns[CourseName]" />
+                    <inputColumn
+                      refId="Package\Flat File to SQL\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CourseDurationInHours]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CourseDurationInHours"
+                      externalMetadataColumnId="Package\Flat File to SQL\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CourseDurationInHours]"
+                      lineageId="Package\Flat File to SQL\Flat File Source.Outputs[Flat File Source Output].Columns[CourseDurationInHours]" />
+                    <inputColumn
+                      refId="Package\Flat File to SQL\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CollegeName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CollegeName"
+                      externalMetadataColumnId="Package\Flat File to SQL\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CollegeName]"
+                      lineageId="Package\Flat File to SQL\Flat File Source.Outputs[Flat File Source Output].Columns[CollegeName]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Flat File to SQL\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CourseId]"
+                      dataType="i4"
+                      name="CourseId" />
+                    <externalMetadataColumn
+                      refId="Package\Flat File to SQL\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CourseName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="CourseName" />
+                    <externalMetadataColumn
+                      refId="Package\Flat File to SQL\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CourseDurationInHours]"
+                      dataType="i4"
+                      name="CourseDurationInHours" />
+                    <externalMetadataColumn
+                      refId="Package\Flat File to SQL\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CollegeName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CollegeName" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Flat File to SQL\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Flat File to SQL\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Flat File to SQL\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Flat File to SQL\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Flat File to SQL\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Flat File to SQL\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Flat File to SQL.Paths[Flat File Source Output]"
+              endId="Package\Flat File to SQL\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Flat File to SQL\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="153.333333333334,42.6666666666667"
+          Id="Package\Flat File to SQL"
+          TopLeft="134.99999396503,66.3684203239194" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Flat File to SQL">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="154.666666666667,42.6666666666667"
+          Id="Package\Flat File to SQL\Flat File Source"
+          TopLeft="168.124992484227,25.3157891957219" />
+        <NodeLayout
+          Size="174.666666666667,42.6666666666667"
+          Id="Package\Flat File to SQL\OLE DB Destination"
+          TopLeft="278.124987566844,155.315787768348" />
+        <EdgeLayout
+          Id="Package\Flat File to SQL.Paths[Flat File Source Output]"
+          TopLeft="245.45832581756,67.9824558623885">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="119.999995082617,87.333331905959"
+              Start="0,0"
+              End="119.999995082617,79.833331905959">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.6666659529795" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,39.6666659529795"
+                    Point2="0,43.6666659529795"
+                    Point3="4,43.6666659529795" />
+                  <mssgle:LineSegment
+                    End="115.999995082617,43.6666659529795" />
+                  <mssgle:CubicBezierSegment
+                    Point1="115.999995082617,43.6666659529795"
+                    Point2="119.999995082617,43.6666659529795"
+                    Point3="119.999995082617,47.6666659529795" />
+                  <mssgle:LineSegment
+                    End="119.999995082617,79.833331905959" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Flat File to SQL\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
